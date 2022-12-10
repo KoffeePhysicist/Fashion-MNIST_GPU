@@ -1,4 +1,4 @@
-# Fashion-MNIST
+# Classification of Fashion-MNIST using Manifold Learning and Tree-based ML Algorithms
 I would like to share my ML project on the [fashion-MNIST](https://github.com/zalandoresearch/fashion-mnist) dataset. More informations on the dataset and benchmark can be found via [Zalando Research](https://github.com/zalandoresearch/fashion-mnist) and [Kaggle](https://www.kaggle.com/zalando-research/fashionmnist)
 
 ## Data Exploration
