@@ -41,12 +41,12 @@ Key parameters for UMAP are n_neighbors and min_dist. The dependences of 2D UMAP
 
 <img src="./figures/2D-T-SNE_vs_2D-UMAP.png">
 
-Data visualizations of t-SNE- and UMAP- embeded in 2D plot are presented. While both plots show the similar 5 clusters, UMAP provides the clear separation of 3 single-label clusters and 2 mixed-label clusters, including 
-(1) trouser, 
-(2) bag,
-(3) t-shirt, 
-(4) angle boot, sneaker and sandle, and 
-(5) shirt, coat, dress and pullover.
+Data visualizations of t-SNE- and UMAP- embeded in 2D plot are presented. While both plots show the similar 5 clusters, UMAP provides the clear separation of 3 single-label clusters and 2 mixed-label clusters, including <br>
+(1) trouser, <br>
+(2) bag,<br>
+(3) t-shirt,<br> 
+(4) angle boot, sneaker and sandle, and <br>
+(5) shirt, coat, dress and pullover.<br>
 
 Therefore, we could speculate the difficulty in classifying the mixed-label groups.
 
@@ -79,11 +79,11 @@ Next we develop 3 supervised ML model to classify the Fashion-MNIST dataset, inc
 
 ## References
 [1] [Fashion-MNIST](https://github.com/zalandoresearch/fashion-mnist)<br>
-[2] [RAPIDS-cuML](https://github.com/rapidsai/cuml)
-[3] [scikit-learn](https://github.com/scikit-learn/scikit-learn)
-[5] [UMAP](https://github.com/lmcinnes/umap)
-[4] [XGBoost](https://github.com/dmlc/xgboost)
-[4] [CatBoost](https://github.com/catboost)
+[2] [RAPIDS-cuML](https://github.com/rapidsai/cuml)<br>
+[3] [scikit-learn](https://github.com/scikit-learn/scikit-learn)<br>
+[5] [UMAP](https://github.com/lmcinnes/umap)<br>
+[4] [XGBoost](https://github.com/dmlc/xgboost)<br>
+[4] [CatBoost](https://github.com/catboost)<br>
 
 ## Author
 Kanokkorn Pimcharoen
