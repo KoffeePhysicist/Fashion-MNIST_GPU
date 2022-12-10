@@ -19,7 +19,7 @@ Fashion-MNIST is a balanced dataset of 10 classes (labels), consiting of 60,000 
 
 <img src="./figures/data_visualization.png">
 
-Data distribution of 10 randomly-selected features were ploted, showing the non-gaussian distributions. Furthermore, as shown in the [notebook](), the data fail the normality test (p-values = 0), confirming the non-gaussian behaviour. While the gaussian distribution offers advantaged in many parametic based classifiers and statistical tool, one key approach is thus to transform the dataset to be guassian-like. However, in this project, we will focus on developing ML models without data transformation, leaving the ML algorithms to struggle these non-gaussian nature of dataset.
+Data distribution of 10 randomly-selected features were ploted, showing the non-gaussian distributions. Furthermore, as shown in the [notebook](./Fashion_MNIST_pipeline.ipynb), the data fail the normality test (p-values = 0), confirming the non-gaussian behaviour. While the gaussian distribution offers advantaged in many parametic based classifiers and statistical tool, one key approach is thus to transform the dataset to be guassian-like. However, in this project, we will focus on developing ML models without data transformation, leaving the ML algorithms to struggle these non-gaussian nature of dataset.
 
 <img src="./figures/data_distributions.png">
 
