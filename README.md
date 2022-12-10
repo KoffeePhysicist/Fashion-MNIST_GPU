@@ -48,13 +48,19 @@ Data visualizations of t-SNE- and UMAP- embeded in 2D plot are presented. While 
 (4) angle boot, sneaker and sandle, and 
 (5) shirt, coat, dress and pullover.
 
-Therefore, we could speculate the difficulty in classifying the mixed-label group.
+Therefore, we could speculate the difficulty in classifying the mixed-label groups.
 
 
 ### Manifold Learning: UMAP Clustering with Trustworthiness Scores
+
+If we allow UMAP to learn with known labels, can we develope the menifold embeded model that can cluster the unseen test set? The result is shown below. 
+
 <img src="./figures/manifold_learning_2D-UMAP.png">
 
+UMAP can learn and compute the cluster of the never-seen-before data quite accuratly. Trustworthiness scores >0.95 in both training and test set, showing that the original data’s structure is very well preserved after dimensionality reduction.
+
 ## Classification
+Next we develop 3 supervised ML model to classify the Fashion-MNIST dataset, including logistic regression, XGBoost, and CatBoost. Among three ML algoriths, CatBoost gain the highest accuracy of 0.90, owning the capability to accuratly classify (less confused) the two mixed-label group seen earlier in 2D-UMAP visualization. The confusion metrix of these models presented below.
 
 ### Logistic Regression
 <img src="./figures/confusion_matrix_Logistic.png">
