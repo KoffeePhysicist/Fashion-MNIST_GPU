@@ -1,5 +1,5 @@
 # Classification of Fashion-MNIST using Manifold Learning and Tree-based ML Algorithms
-I would like to share my ML project on the [fashion-MNIST](https://github.com/zalandoresearch/fashion-mnist) dataset. More informations on the dataset and benchmark can be found via [Zalando Research](https://github.com/zalandoresearch/fashion-mnist) and [Kaggle](https://www.kaggle.com/zalando-research/fashionmnist)
+I would like to share my ML project on the [fashion-MNIST](https://github.com/zalandoresearch/fashion-mnist) dataset. More informations on the dataset and benchmark can be found on [Zalando Research](https://github.com/zalandoresearch/fashion-mnist) and [Kaggle](https://www.kaggle.com/zalando-research/fashionmnist)
 
 ## Data Exploration
 Fashion-MNIST is a balanced dataset of 10 classes (labels), consiting of 60,000 images as the training set and 6,000 images as the testing set. Each image is a 28x28 pixel grayscale image, which can be directly flatten to 784 features. Given that pixel values is between 0 and 255. The dataset is normalized by a simple division by 255, yielding the data to a scale between 0 and 1.
@@ -19,7 +19,7 @@ Fashion-MNIST is a balanced dataset of 10 classes (labels), consiting of 60,000 
 
 <img src="./figures/data_visualization.png">
 
-Data distribution of 10 randomly-selected features were ploted, showing the non-gaussian distributions. Furthermore, as shown in the [notebook](./Fashion_MNIST_pipeline.ipynb), the data fail the normality test (p-values = 0), confirming the non-gaussian behaviour. While the gaussian distribution offers advantages in many parametic based classifiers and statistical tools, one key approach is thus to transform the dataset to be guassian-like. However, in this project, we will focus on developing ML models without data transformation, leaving the ML algorithms to struggle these non-gaussian nature of dataset.
+Data distributions of 10 randomly-selected features were ploted, showing the non-gaussian distributions. Furthermore, as shown in the [notebook](./Fashion_MNIST_pipeline.ipynb), the data fail the normality test (p-values = 0), confirming the non-gaussian behaviour. While the gaussian distribution offers advantages in many parametic based classifiers and statistical tools, one key approach is thus to transform the dataset to be guassian-like. However, in this project, we will focus on developing ML models without data transformation, leaving the ML algorithms to struggle the non-gaussian nature of dataset.
 
 <img src="./figures/data_distributions.png">
 
@@ -62,7 +62,7 @@ After learning, ten clusters are clearly observed. However, the significant simi
 UMAP can learn and compute the cluster of the never-seen-before data quite accuratly. Trustworthiness scores >0.95 in both training and test set, showing that the original data’s structure is very well preserved after dimensionality reduction.
 
 ## Classification
-Next we develop 3 supervised ML model to classify the Fashion-MNIST dataset, including logistic regression, XGBoost, and CatBoost. Among three ML algoriths, CatBoost gain the highest accuracy of ~90%, owning the capability to accuratly classify (less confused) the two mixed-label group seen earlier in 2D-UMAP visualization. The confusion metrix of these models presented below.
+Next we develop 3 supervised ML model to classify the Fashion-MNIST dataset, including logistic regression, XGBoost, and CatBoost. Among three ML algoriths, CatBoost gain the highest accuracy of ~90%, owning the capability to accuratly classify (less confused) the two mixed-label group seen earlier in 2D-UMAP visualization. The confusion matrixes of these models presented below.
 
 ### Logistic Regression
 <img src="./figures/confusion_matrix_Logistic.png">
