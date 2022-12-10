@@ -57,7 +57,7 @@ If we allow UMAP to learn with known labels, can we develope the menifold embede
 
 <img src="./figures/manifold_learning_2D-UMAP.png">
 
-After learning, ten clusters are clearly observed. However, the significant similarity between "angle boot, sneaker and sandle" and "shirt, coat, dress and pullover" persists, showing the slightly mixed of different colors.
+After learning, ten clusters are clearly observed. However, the significant similarity in images of "angle boot, sneaker and sandle" and images of "shirt, coat, dress and pullover" persists, showing the slightly mixed of different colors in each clustering island.
 
 UMAP can learn and compute the cluster of the never-seen-before data quite accuratly. Trustworthiness scores >0.95 in both training and test set, showing that the original data’s structure is very well preserved after dimensionality reduction.
 
