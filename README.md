@@ -19,12 +19,12 @@ Fashion-MNIST is a balanced dataset of 10 classes (labels), consiting of 60,000 
 
 <img src="./figures/data_visualization.png">
 
-Data distribution of 10 randomly-selected features were ploted, showing the non-gaussian distributions. Furthermore, as shown in the [notebook](./Fashion_MNIST_pipeline.ipynb), the data fail the normality test (p-values = 0), confirming the non-gaussian behaviour. While the gaussian distribution offers advantaged in many parametic based classifiers and statistical tool, one key approach is thus to transform the dataset to be guassian-like. However, in this project, we will focus on developing ML models without data transformation, leaving the ML algorithms to struggle these non-gaussian nature of dataset.
+Data distribution of 10 randomly-selected features were ploted, showing the non-gaussian distributions. Furthermore, as shown in the [notebook](./Fashion_MNIST_pipeline.ipynb), the data fail the normality test (p-values = 0), confirming the non-gaussian behaviour. While the gaussian distribution offers advantages in many parametic based classifiers and statistical tools, one key approach is thus to transform the dataset to be guassian-like. However, in this project, we will focus on developing ML models without data transformation, leaving the ML algorithms to struggle these non-gaussian nature of dataset.
 
 <img src="./figures/data_distributions.png">
 
 ## Clustering
-To have a sense of how the dataset could look like in 2D and what a chance of data clustering, t-SNE and UMAP are chosen here. Both t-SNE and UMAP are nonlinear dimensionality reduction techniques. The orginal 784 features is reduced to 2 features, and the dataset then can be visualized in 2D plot. It's important to note that the analysis below is carried out on GPU node, using RAPIDS's cuML library.
+To have a sense of how the dataset could look like in 2D and what a chance of data clustering, t-SNE and UMAP are chosen here. Both t-SNE and UMAP are nonlinear dimensionality reduction techniques. The orginal 784 features are reduced to 2 features, and the dataset then can be visualized in 2D plot. It's important to note that the analysis below is carried out on GPU node, using RAPIDS's cuML library.
 
 ### 2D t-SNE
 
