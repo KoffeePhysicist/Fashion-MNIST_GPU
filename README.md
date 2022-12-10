@@ -1,8 +1,8 @@
 # Fashion-MNIST
-I would like to share my ML project on the [fashion-MNIST](https://github.com/zalandoresearch/fashion-mnist) dataset. Further informations on the dataset can be found via [Zalando Research](https://github.com/zalandoresearch/fashion-mnist) and [Kaggle](https://www.kaggle.com/zalando-research/fashionmnist)
+I would like to share my ML project on the [fashion-MNIST](https://github.com/zalandoresearch/fashion-mnist) dataset. More informations on the dataset and benchmark can be found via [Zalando Research](https://github.com/zalandoresearch/fashion-mnist) and [Kaggle](https://www.kaggle.com/zalando-research/fashionmnist)
 
 ## Data Exploration
-Fashion-MNIST is a balanced dataset of 10 classes (labels), consiting of 60,000 images as the training set and 6,000 images as the testing set. 
+Fashion-MNIST is a balanced dataset of 10 classes (labels), consiting of 60,000 images as the training set and 6,000 images as the testing set. Each image is a 28x28 pixel grayscale image, which can be directly flatten to 784 features. Given that pixel values is between 0 and 255. The dataset is normalized by a simple division by 255, yielding the data to a scale between 0 and 1.
 
 | Label | Description |
 | --- | --- |
@@ -17,23 +17,39 @@ Fashion-MNIST is a balanced dataset of 10 classes (labels), consiting of 60,000 
 |  8  | Bag |
 |  9  | Ankle boot |
 
-Each image is a 28x28 pixel grayscale image, which can be directly flatten to 784 features.
 <img src="./figures/data_visualization.png">
 
-Data distribution of 10 randomly-selected data were ploted, showing the non-gaussian distributions. Furthermore, as shown in the [notebook](), the data fails the normality test (p-values = 0), confirming the non-gaussian behaviour.
+Data distribution of 10 randomly-selected features were ploted, showing the non-gaussian distributions. Furthermore, as shown in the [notebook](), the data fail the normality test (p-values = 0), confirming the non-gaussian behaviour. While the gaussian distribution offers advantaged in many parametic based classifiers and statistical tool, one key approach is thus to transform the dataset to be guassian-like. However, in this project, we will focus on developing ML models without data transformation, leaving the ML algorithms to struggle these non-gaussian nature of dataset.
+
 <img src="./figures/data_distributions.png">
 
 ## Clustering
+To have a sense of how the dataset could look like in 2D and what a chance of data clustering, t-SNE and UMAP are chosen here. Both t-SNE and UMAP are nonlinear dimensionality reduction techniques. The orginal 784 features is reduced to 2 features, and the dataset then can be visualized in 2D plot. It's important to note that the analysis below is carried out on GPU node, using RAPIDS's cuML library.
 
 ### 2D t-SNE
+
+A key parameter for t-SNE is perplexity. The dependence of 2D t-SNE on perplexity is shown below. 
+
 <img src="./figures/2D-t-SNT_tune_perplexity.png">
 
 ### 2D UMAP
+Key parameters for UMAP are n_neighbors and min_dist. The dependences of 2D UMAP on n_neighbors and min_dist are shown below. 
 <img src="./figures/2D-UMAP_tune_n_neighbors.png">
-<img src="./figures/2D-UMAP_tune_min_dist">
+<img src="./figures/2D-UMAP_tune_min_dist.png">
 
 ### Comparison of t-SNE and UMAP
+
 <img src="./figures/2D-T-SNE_vs_2D-UMAP.png">
+
+Data visualizations of t-SNE- and UMAP- embeded in 2D plot are presented. While both plots show the similar 5 clusters, UMAP provides the clear separation of 3 single-label clusters and 2 mixed-label clusters, including 
+(1) trouser, 
+(2) bag,
+(3) t-shirt, 
+(4) angle boot, sneaker and sandle, and 
+(5) shirt, coat, dress and pullover.
+
+Therefore, we could speculate the difficulty in classifying the mixed-label group.
+
 
 ### Manifold Learning: UMAP Clustering with Trustworthiness Scores
 <img src="./figures/manifold_learning_2D-UMAP.png">
